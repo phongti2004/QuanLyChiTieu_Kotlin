@@ -1,7 +1,8 @@
-package com.example.quanlichitieukl.Data
+package com.example.quanlichitieukl.data.Dao
 
 import androidx.room.*
-import com.example.quanlichitieukl.Data.Model.KhoanThu
+import com.example.quanlichitieukl.data.Model.KhoanThu
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface KhoanThuDao {
@@ -15,5 +16,5 @@ interface KhoanThuDao {
     suspend fun delete(khoanThu: KhoanThu)
 
     @Query("SELECT * FROM khoan_thu ORDER BY id DESC")
-    suspend fun getAll(): List<KhoanThu>
+    fun getAll(): Flow<List<KhoanThu>>
 }

@@ -3,8 +3,11 @@ package com.example.quanlichitieukl
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.example.quanlichitieukl.Fragment.BaoCaoFragment
+import com.example.quanlichitieukl.Fragment.KhacFragment
+import com.example.quanlichitieukl.Fragment.MucTieuFragment
+import com.example.quanlichitieukl.Fragment.TaiChinhFragment
+import com.example.quanlichitieukl.Fragment.TraoDoiFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {

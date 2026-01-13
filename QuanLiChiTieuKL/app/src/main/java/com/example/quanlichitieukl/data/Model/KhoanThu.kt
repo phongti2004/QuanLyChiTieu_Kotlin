@@ -1,9 +1,9 @@
-package com.example.quanlichitieukl.Data
+package com.example.quanlichitieukl.data.Model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "khoan_thu")
+@Entity(tableName = "khoan_chi")
 class KhoanThu (
     @PrimaryKey(autoGenerate = true) var id: Int = 0,
     var ten: String,
