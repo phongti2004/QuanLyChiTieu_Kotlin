@@ -1,4 +1,4 @@
-package com.example.quanlichitieukl.Fragment
+package com.example.quanlichitieukl.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

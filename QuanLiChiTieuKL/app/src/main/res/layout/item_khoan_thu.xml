@@ -26,20 +26,31 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:id="@+id/tenKhoanThu"/>
-            <TextView
-                android:gravity="end"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Số tiền"
-                android:textSize="16sp"
-                android:id="@+id/soTien"/>
-            <TextView
-                android:gravity="end"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Ngày tạo"
-                android:textSize="16sp"
-                android:id="@+id/ngayTao"/>
+                android:orientation="horizontal">
+                <TextView
+                    android:gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Số tiền: "
+                    android:textSize="16sp"/>
+                <TextView
+                    android:gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Số tiền"
+                    android:textSize="16sp"
+                    android:id="@+id/soTien"/>
+                <TextView
+                    android:gravity="end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ngày tạo"
+                    android:textSize="16sp"
+                    android:id="@+id/ngayTao"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

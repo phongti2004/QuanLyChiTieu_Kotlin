@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragment.LoaiKhoanChiFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edtTenKhoanChi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Loại chi tiêu"
+            android:padding="10dp" />
+
+        <ImageButton
+            android:id="@+id/imgLoaiKhoanChi"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Loại chi tiêu"
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rycLoaiKhoanChi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:padding="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnThem"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/yellow"
+                android:paddingVertical="12dp"
+                android:text="Thêm"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btnXoa"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/red"
+                android:paddingVertical="12dp"
+                android:text="Xóa"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

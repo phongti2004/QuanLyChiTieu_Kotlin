@@ -3,11 +3,9 @@ package com.example.quanlichitieukl.data.Model
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "khoan_thu")
-class KhoanThu(
+@Entity(tableName = "loai_khoan_thu")
+data class LoaiKhoanThu(
     @PrimaryKey(autoGenerate = true) var id: Int = 0,
-    var ten: String,
-    var soTien: Double,
-    var LoaiKhoanThu: Int,
-    var ngayTao: String
+    var loaiKT: String,
+    var imgKT: String,
 )

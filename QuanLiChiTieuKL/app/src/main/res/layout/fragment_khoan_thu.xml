@@ -3,11 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment.KhoanThuFragment">
-
+    tools:context=".fragment.KhoanThuFragment">
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
+        android:id="@+id/recyclerKhoanThu"
+        />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/themKhoanThu"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/baseline_add_circle_outline_24"
+        android:layout_margin="16dp"
         />
 </FrameLayout>

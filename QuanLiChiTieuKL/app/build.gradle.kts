@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    kotlin("kapt")
+    id("com.google.devtools.ksp") version "1.9.22-1.0.16"
 }
 
 android {
@@ -10,23 +10,12 @@ android {
 
     defaultConfig {
         applicationId = "com.example.quanlichitieukl"
-        minSdk = 34
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -42,14 +31,19 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.room.common.jvm)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    //Database
+
+    //fragment
+    implementation("androidx.fragment:fragment-ktx:1.6.2")
+
+    // Room(data base)
     implementation("androidx.room:room-runtime:2.6.1")
-    kapt("androidx.room:room-compiler:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
-    //circleImageView
-    implementation ("de.hdodenhof:circleimageview:3.1.0")
+    ksp("androidx.room:room-compiler:2.6.1")
+
+    // circleImageView
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+
+    // glide(xử lý ảnh)
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.16.0")
 }

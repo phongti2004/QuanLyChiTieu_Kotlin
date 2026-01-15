@@ -1,13 +1,14 @@
-package com.example.quanlichitieukl
+package com.example.quanlichitieukl.activity
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.example.quanlichitieukl.Fragment.BaoCaoFragment
-import com.example.quanlichitieukl.Fragment.KhacFragment
-import com.example.quanlichitieukl.Fragment.MucTieuFragment
-import com.example.quanlichitieukl.Fragment.TaiChinhFragment
-import com.example.quanlichitieukl.Fragment.TraoDoiFragment
+import com.example.quanlichitieukl.fragment.BaoCaoFragment
+import com.example.quanlichitieukl.fragment.KhacFragment
+import com.example.quanlichitieukl.fragment.MucTieuFragment
+import com.example.quanlichitieukl.fragment.TaiChinhFragment
+import com.example.quanlichitieukl.fragment.TraoDoiFragment
+import com.example.quanlichitieukl.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +16,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-
         loadFragment(TaiChinhFragment())
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav)
         bottomNav.setOnItemSelectedListener { item ->
